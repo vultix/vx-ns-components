@@ -1,0 +1,32 @@
+.vx-ns-dialog-overlay {
+  align-items: center;
+  justify-content: center;
+  padding: 15dip;
+}
+
+.vx-ns-dialog {
+  border-radius: 5dip;
+  background: white;
+  animation-name: scaleIn;
+  animation-duration: .3s;
+  transform-origin: center;
+}
+
+.vx-ns-dialog-flex {
+  flex: 1;
+  flex-direction: column;
+  padding: 20dip;
+}
+
+.vx-ns-dialog-message {
+  white-space: normal;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5, 0.5);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}

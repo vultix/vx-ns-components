@@ -29,3 +29,9 @@ export {VxNsFormFieldDirective} from './form-field/vx-ns-form-field.directive';
 
 export {VxNsAutocompleteModule} from './autocomplete/vx-ns-autocomplete.module';
 export {VxNsAutocompleteComponent} from './autocomplete/vx-ns-autocomplete.component';
+
+export {VxNsDialogModule} from './dialog/vx-ns-dialog.module';
+export {VxNsDialogComponent} from './dialog/vx-ns-dialog.component';
+export {VxNsDialog, VxNsDialogOptions, VxNsDialogComponentOptions} from './dialog/vx-ns-dialog.service';
+export {VX_NS_DIALOG_DATA} from './dialog/dialog.tokens';
+export {VxNsDialogActionsDirective, VxNsDialogContentDirective, VxNsDialogTitleDirective} from './dialog/vx-ns-dialog.directives';

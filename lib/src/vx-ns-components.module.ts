@@ -5,8 +5,9 @@ import { VxNsStepperModule } from "./stepper/vx-ns-stepper.module";
 import { VxNsMenuModule } from "./menu/vx-ns-menu.module";
 import { VxNsFormFieldModule } from "./form-field/vx-ns-form-field.module";
 import { VxNsAutocompleteModule } from "./autocomplete/vx-ns-autocomplete.module";
+import {VxNsDialogModule} from './dialog/vx-ns-dialog.module';
 
-const modules = [VxNsRadioModule, VxNsPagerModule, VxNsStepperModule, VxNsMenuModule, VxNsFormFieldModule, VxNsAutocompleteModule];
+const modules = [VxNsRadioModule, VxNsPagerModule, VxNsStepperModule, VxNsMenuModule, VxNsFormFieldModule, VxNsAutocompleteModule, VxNsDialogModule];
 @NgModule({
     imports: [...modules],
     exports: [...modules]

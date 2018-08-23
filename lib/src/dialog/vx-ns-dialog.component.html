@@ -1,0 +1,24 @@
+<FlexboxLayout class="vx-ns-dialog-overlay" (tap)="_overlayTap()" *ngIf="!options.fullscreen">
+    <FlexboxLayout class="vx-ns-dialog" *ngIf="options.component" (tap)="_dialogTap()" [width]="options.width || 'auto'" [height]="options.height || 'auto'">
+        <FlexboxLayout class="vx-ns-dialog-flex">
+            <ng-container *ngComponentOutlet="options.component; injector: _childInjector;"></ng-container>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <FlexboxLayout class="vx-ns-dialog" *ngIf="!options.component" (tap)="_dialogTap()" [width]="options.width || 'auto'" [height]="options.height || 'auto'">
+        <FlexboxLayout class="vx-ns-dialog-flex">
+            <Label class="vx-ns-dialog-title" [text]="options.title"></Label>
+            <ScrollView class="vx-ns-dialog-content">
+                <StackLayout>
+                    <Label [text]="options.message" class="vx-ns-dialog-message"></Label>
+                </StackLayout>
+            </ScrollView>
+            <FlexboxLayout class="vx-ns-dialog-actions">
+                <Button *ngFor="let button of options.buttons" (tap)="close(button)" [text]="button"></Button>
+            </FlexboxLayout>
+        </FlexboxLayout>
+    </FlexboxLayout>
+</FlexboxLayout>
+
+<ng-container *ngIf="options.fullscreen">
+    <ng-container *ngComponentOutlet="options.component; injector: _childInjector;"></ng-container>
+</ng-container>

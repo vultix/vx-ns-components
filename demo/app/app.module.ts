@@ -11,10 +11,13 @@ import { StepperDemoComponent } from "./stepper-demo/stepper-demo.component";
 import { FormFieldDemoComponent } from "./form-field-demo/form-field-demo.component";
 import { RadioDemoComponent } from "./radio-demo/radio-demo.component";
 import { AutocompleteDemoComponent } from "./autocomplete-demo/autocomplete-demo.component";
+import {DialogDemoComponent} from './dialog-demo/dialog-demo.component';
+
 registerElement("PreviousNextView", () => require("nativescript-iqkeyboardmanager").PreviousNextView);
+
 @NgModule({
     imports: [NativeScriptModule, VxNsComponentsModule, NativeScriptFormsModule, AppRoutingModule],
-    declarations: [AppComponent, HomeComponent, MenuDemoComponent, StepperDemoComponent, FormFieldDemoComponent, RadioDemoComponent, AutocompleteDemoComponent],
+    declarations: [AppComponent, HomeComponent, MenuDemoComponent, StepperDemoComponent, FormFieldDemoComponent, RadioDemoComponent, AutocompleteDemoComponent, DialogDemoComponent],
     bootstrap: [AppComponent],
     providers: [{provide: ErrorHandler, useClass: CustomErrorHandler}],
     schemas: [NO_ERRORS_SCHEMA]

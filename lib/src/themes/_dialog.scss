@@ -1,0 +1,40 @@
+@mixin vx-ns-dialog-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $background: map_get($colors, background);
+  $primary: map_get($colors, primary);
+  $darkerBgFg: map_get($colors, darkerBgFg);
+
+
+  .vx-ns-dialog {
+    background: $background;
+  }
+
+  .vx-ns-dialog-page {
+    background: transparentize($darkerBgFg, 0.5);
+    margin: 0;
+  }
+
+  .vx-ns-loading-indicator {
+    color: $primary;
+  }
+
+  .vx-ns-dialog-title {
+    font-size: 21dip;
+    font-weight: bold;
+    margin-bottom: 15dip;
+    white-space: normal;
+    flex-shrink: 0;
+  }
+
+  .vx-ns-dialog-content {
+    flex-shrink: 1;
+  }
+
+  .vx-ns-dialog-actions {
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 15dip;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+}

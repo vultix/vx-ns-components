@@ -10,6 +10,7 @@ export class HomeComponent {
         {name: 'Stepper', route: '/stepper-demo'},
         {name: 'Form Field', route: '/form-field-demo'},
         {name: 'Radio', route: '/radio-demo'},
-        {name: 'Autocomplete', route: '/autocomplete-demo'}
+        {name: 'Autocomplete', route: '/autocomplete-demo'},
+        {name: 'Dialog', route: '/dialog-demo'}
     ];
 }

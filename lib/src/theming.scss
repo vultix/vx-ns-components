@@ -5,6 +5,7 @@
 @import "./themes/menu";
 @import "./themes/form-field";
 @import "./themes/autocomplete";
+@import "./themes/dialog";
 
 @mixin vx-ns-all-components($colors) {
   $colors: vx-ns-prepare-colors($colors);
@@ -14,4 +15,5 @@
   @include vx-ns-menu-theme($colors);
   @include vx-ns-form-field-theme($colors);
   @include vx-ns-autocomplete-theme($colors);
+  @include vx-ns-dialog-theme($colors);
 }

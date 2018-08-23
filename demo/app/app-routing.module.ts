@@ -8,6 +8,7 @@ import { StepperDemoComponent } from "./stepper-demo/stepper-demo.component";
 import { FormFieldDemoComponent } from "./form-field-demo/form-field-demo.component";
 import { RadioDemoComponent } from "./radio-demo/radio-demo.component";
 import { AutocompleteDemoComponent } from "./autocomplete-demo/autocomplete-demo.component";
+import {DialogDemoComponent} from './dialog-demo/dialog-demo.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: 'stepper-demo', component: StepperDemoComponent},
     { path: 'form-field-demo', component: FormFieldDemoComponent},
     { path: 'radio-demo', component: RadioDemoComponent},
-    { path: 'autocomplete-demo', component: AutocompleteDemoComponent}
+    { path: 'autocomplete-demo', component: AutocompleteDemoComponent},
+    { path: 'dialog-demo', component: DialogDemoComponent}
 ];
 
 @NgModule({
