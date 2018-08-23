@@ -1,0 +1,16 @@
+@mixin vx-ns-radio-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $primary: map_get($colors, primary);
+  $primary: map_get($colors, primary);
+  $accent: map_get($colors, accent);
+  $border: map_get($colors, borderLight);
+
+
+  .vx-ns-radio-check {
+    background: $primary;
+  }
+
+  .vx-ns-radio-circle {
+    border-color: $border;
+  }
+}

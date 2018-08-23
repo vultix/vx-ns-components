@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules",
+    "platforms",
+    "e2e"
+  ],
+  "include": [
+    "**/*.module.ts",
+    "**/*.d.ts",
+    "app/main.aot.ts"
+  ]
+}

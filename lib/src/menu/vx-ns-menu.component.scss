@@ -1,0 +1,19 @@
+.vx-ns-menu {
+  border-radius: 3dip;
+  transform-origin: top center;
+}
+
+.overlay {
+  background: transparent;
+}
+
+.defaultText {
+  padding: 15dip;
+  font-size: 14dip;
+}
+
+.hidden {
+  border-radius: 1;
+  width: 0;
+  height: 0;
+}

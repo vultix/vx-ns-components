@@ -1,0 +1,9 @@
+<GridLayout rows="auto" columns="auto, *">
+    <StackLayout class="vx-ns-stepper-line" [class.last]="last" row="0" col="0"></StackLayout>
+
+    <ScrollView  row="0" col="1" #container height="0">
+        <StackLayout #content class="content">
+            <ng-container [ngTemplateOutlet]="step._template"></ng-container>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

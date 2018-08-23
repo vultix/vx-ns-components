@@ -1,0 +1,9 @@
+<StackLayout>
+    <vx-ns-radio-group #group>
+        <vx-ns-radio-button text="$10" value="10 dollars"></vx-ns-radio-button>
+        <vx-ns-radio-button text="$20" value="20 dollars"></vx-ns-radio-button>
+        <vx-ns-radio-button text="$30" value="30 dollars"></vx-ns-radio-button>
+    </vx-ns-radio-group>
+
+    <Label *ngIf="group.value" text="You selected: {{group.value}}"></Label>
+</StackLayout>

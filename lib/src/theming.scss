@@ -1,0 +1,17 @@
+@import "./themes/defaults";
+@import "./themes/radio";
+@import "./themes/pager";
+@import "./themes/stepper";
+@import "./themes/menu";
+@import "./themes/form-field";
+@import "./themes/autocomplete";
+
+@mixin vx-ns-all-components($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  @include vx-ns-radio-theme($colors);
+  @include vx-ns-pager-theme($colors);
+  @include vx-ns-stepper-theme($colors);
+  @include vx-ns-menu-theme($colors);
+  @include vx-ns-form-field-theme($colors);
+  @include vx-ns-autocomplete-theme($colors);
+}

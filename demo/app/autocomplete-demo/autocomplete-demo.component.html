@@ -1,0 +1,15 @@
+<ScrollView>
+    <StackLayout>
+        <Button (tap)="multiple = !multiple" [text]="multiple ? 'Set Single Selection' : 'Set Multiple Selection'"></Button>
+        <vx-ns-autocomplete placeholder="Select State" [(ngModel)]="value" required [multiple]="multiple" horizontalAlignment="center">
+            <vx-ns-item text="Utah" value="valUtah"></vx-ns-item>
+            <vx-ns-item text="Arizona" value="valArizona"></vx-ns-item>
+            <vx-ns-item text="Alaska" value="valAlaska"></vx-ns-item>
+            <vx-ns-item text="Arkansaw" value="valArkansaw"></vx-ns-item>
+            <vx-ns-item text="Hawaii" value="valHawaii"></vx-ns-item>
+        </vx-ns-autocomplete>
+
+        <Label [text]="value | json"></Label>
+        <Label [text]="value?.length"></Label>
+    </StackLayout>
+</ScrollView>

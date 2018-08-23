@@ -1,0 +1,10 @@
+<AbsoluteLayout class="hidden">
+    <AbsoluteLayout #container [width]="_screenWidth" [height]="_screenHeight" class="overlay" (tap)="_overlayTap()">
+        <ScrollView #menu [class.vx-ns-menu]="_ios" [class.visible]="visible" horizontalAlignment="left">
+            <StackLayout [class.vx-ns-menu]="!_ios">
+                <ng-content select="vx-ns-item"></ng-content>
+                <Label *ngIf="!items.length" [text]="defaultText" class="defaultText"></Label>
+            </StackLayout>
+        </ScrollView>
+    </AbsoluteLayout>
+</AbsoluteLayout>

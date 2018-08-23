@@ -1,0 +1,16 @@
+<StackLayout>
+    <Button text="Show dropdown menu!" horizontalAlignment="center" [vxNsMenuTrigger]="menu"></Button>
+
+    <Label text="You selected: {{selected}}" *ngIf="selected"></Label>
+    <Button (tap)="selected = undefined" text="Clear!"></Button>
+
+    <StackLayout width="130">
+        <vx-ns-menu #menu (itemSelect)="selected = $event">
+            <vx-ns-item text="Menu Item a" value="a"></vx-ns-item>
+            <vx-ns-item text="Menu Item b" value="b"></vx-ns-item>
+            <vx-ns-item text="Menu Item c" value="c" *ngIf="!selected"></vx-ns-item>
+            <vx-ns-item text="Menu Item d" value="d "*ngIf="!selected"></vx-ns-item>
+            <vx-ns-item text="Menu Item e" value="e" *ngIf="!selected"></vx-ns-item>
+        </vx-ns-menu>
+    </StackLayout>
+</StackLayout>

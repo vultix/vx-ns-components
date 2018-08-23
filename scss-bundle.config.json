@@ -1,0 +1,4 @@
+{
+  "entry": "./lib/src/theming.scss",
+  "dest": "dist/vx-ns-components/theming.scss"
+}

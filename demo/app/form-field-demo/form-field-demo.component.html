@@ -1,0 +1,14 @@
+<StackLayout>
+    <Button (tap)="disabled = !disabled" [text]="disabled ? 'Enable' : 'Disable'"></Button>
+
+    <vx-ns-form-field horizontalAlignment="center">
+        <TextField vxNsFormField hint="Hello" ngModel required [disabled]="disabled"></TextField>
+    </vx-ns-form-field>
+
+    <vx-ns-form-field horizontalAlignment="center" class="mTop10">
+        <TextField vxNsFormField keyboardType="email" email hint="Email" ngModel required [disabled]="disabled"></TextField>
+    </vx-ns-form-field>
+
+    <Label [text]="disabled"></Label>
+
+</StackLayout>

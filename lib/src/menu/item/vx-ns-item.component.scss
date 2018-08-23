@@ -1,0 +1,9 @@
+.vx-ns-item {
+  padding: 15dip;
+  font-size: 14dip;
+  text-align: left;
+
+  &.disabled {
+    opacity: .3;
+  }
+}

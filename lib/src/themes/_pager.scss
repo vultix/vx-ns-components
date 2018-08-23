@@ -1,0 +1,14 @@
+@mixin vx-ns-pager-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $border: map_get($colors, borderLight);
+
+
+  .vx-ns-pager {
+    border-width: 1dip;
+    border-color: $border;
+  }
+
+  .vx-ns-radio-circle {
+    border-color: $border;
+  }
+}

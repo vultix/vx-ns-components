@@ -1,0 +1,7 @@
+@import "../../lib/src/theming";
+
+@include vx-ns-all-components(());
+
+.mTop10 {
+  margin-top: 10dip;
+}

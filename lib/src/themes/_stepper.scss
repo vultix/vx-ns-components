@@ -1,0 +1,26 @@
+// Use this mixin to apply colored themes to the stepper
+@mixin vx-ns-stepper-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $line: map_get($colors, borderLight);
+  $primary: map_get($colors, primary);
+  $background: map_get($colors, background);
+  $foreground: map_get($colors, foreground);
+
+
+  .vx-ns-stepper-line {
+    background: $line;
+  }
+
+  .vx-ns-stepper-circle {
+    background: $line;
+    color: $background;
+    &.active {
+      background: $primary;
+    }
+  }
+
+  .vx-ns-stepper-highlighted {
+    background: transparentize($foreground, 0.88);
+  }
+
+}

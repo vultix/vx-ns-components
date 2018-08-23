@@ -1,0 +1,16 @@
+<StackLayout class="vx-ns-form-field-wrapper {{_el.nativeElement.className}}"
+             [class.disabled]="field.disabled"
+             [class.focused]="field.focused"
+             [class.invalid]="field.invalid || _invalid"
+             [horizontalAlignment]="horizontalAlignment"
+             (tap)="_handleTap()">
+    <Label class="vx-ns-form-field-label">
+        <FormattedString>
+            <Span [text]="field.label || field.placeholder"></Span>
+            <Span class="vx-ns-form-field-required-label" text="*" *ngIf="field.required || field.requiredLabel"></Span>
+        </FormattedString>
+    </Label>
+    <FlexboxLayout class="vx-ns-form-field-container">
+        <ng-content></ng-content>
+    </FlexboxLayout>
+</StackLayout>

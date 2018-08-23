@@ -1,0 +1,21 @@
+<vx-ns-form-field [vxNsAttachMenu]="menu" (tap)="_handleTap()" [_invalid]="invalid" [horizontalAlignment]="horizontalAlignment">
+
+    <Label *ngFor="let item of _selectedItems" class="vx-ns-autocomplete-chip" (tap)="_removeItem(item.value)">
+        <FormattedString>
+            <Span [text]="item.text"></Span>
+            <Span text="  "></Span>
+            <Span text="X" class="vx-ns-autocomplete-chip-x"></Span>
+        </FormattedString>
+    </Label>
+
+    <TextField vxNsFormField [placeholder]="placeholder" (textChange)="_textChanged();" (tap)="_handleTap()"
+               [disabled]="disabled" (blur)="_onTouched()" [requiredLabel]="required"></TextField>
+
+    <Label text="▼" class="vx-ns-autocomplete-down-arrow"></Label>
+</vx-ns-form-field>
+
+<vx-ns-menu #menu [visible]="field.focused" [offsetTop]="0" [matchWidth]="true" (itemSelect)="_selectItem($event)" [defaultText]="defaultText" (visibleChange)="_dropdownVisible($event)">
+    <vx-ns-item *ngFor="let item of _filteredItems" [disabled]="item.disabled" [text]="item.text" [value]="item.value">
+
+    </vx-ns-item>
+</vx-ns-menu>

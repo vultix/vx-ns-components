@@ -1,0 +1,31 @@
+// Use this mixin to apply colored themes to the dropdown
+@mixin vx-ns-autocomplete-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $background: map_get($colors, background);
+  $foreground: map_get($colors, foreground);
+  $primary: map_get($colors, primary);
+  $error: map_get($colors, error);
+  $accent: map_get($colors, accent);
+  $border: map_get($colors, borderLight);
+  $borderDark: map_get($colors, borderDark);
+
+  .vx-ns-autocomplete-chip {
+    font-size: 13dip;
+    padding: 3dip;
+    margin: 3dip;
+    border-radius: 3dip;
+    background: $primary;
+    color: $background;
+  }
+
+  .vx-ns-autocomplete-chip-x {
+    font-size: 10dip;
+  }
+
+  .vx-ns-autocomplete-down-arrow {
+    color: $borderDark;
+    font-size: 10dip;
+    padding: 3dip 6dip;
+  }
+
+}

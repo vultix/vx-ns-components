@@ -1,0 +1,70 @@
+// Use this mixin to apply colored themes to the dropdown
+@mixin vx-ns-form-field-theme($colors) {
+  $colors: vx-ns-prepare-colors($colors);
+  $background: map_get($colors, background);
+  $foreground: map_get($colors, foreground);
+  $primary: map_get($colors, primary);
+  $error: map_get($colors, error);
+  $accent: map_get($colors, accent);
+  $border: map_get($colors, borderLight);
+
+  $darkerBgFg: map-get($colors, darkerBgFg);
+  $lighterBgFg: map-get($colors, lighterBgFg);
+
+  $placeholder: mix($darkerBgFg, $lighterBgFg, 30%);
+  $labelColor: map_get($colors, borderLight);
+
+  .vx-ns-form-field {
+    border-width: 0;
+    border-color: transparent;
+    border-radius: 1;
+    font-size: 16dip;
+    flex-grow: 1;
+    width: 150dip;
+    //height: 20dip;
+    padding: 7dip;
+    placeholder-color: transparent;
+    color: $foreground;
+
+    &.show-hint {
+      placeholder-color: $placeholder;
+    }
+  }
+
+  .vx-ns-form-field-container {
+    border-color: $border;
+  }
+
+  .vx-ns-form-field-label {
+    color: $border;
+  }
+
+  .vx-ns-form-field-wrapper {
+    &.focused {
+      .vx-ns-form-field-container {
+        border-color: $primary;
+      }
+      .vx-ns-form-field-label {
+        color: $primary;
+      }
+      .vx-ns-form-field-required-label {
+        color: $accent;
+      }
+    }
+
+    &.invalid {
+      .vx-ns-form-field-container {
+        border-color: $error;
+      }
+
+      .vx-ns-form-field-label {
+        color: $error;
+      }
+
+      .vx-ns-form-field-required-label {
+        color: mix($accent, $error);
+      }
+    }
+  }
+
+}

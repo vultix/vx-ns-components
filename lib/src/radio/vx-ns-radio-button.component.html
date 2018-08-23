@@ -1,0 +1,12 @@
+<GridLayout rows="auto" columns="auto, *" (tap)="onTap()" class="wrapper">
+    <FlexboxLayout class="outer vx-ns-radio-circle" row="0" col="0">
+        <StackLayout class="inner vx-ns-radio-check" [class.checked]="group.value === value">
+
+        </StackLayout>
+    </FlexboxLayout>
+
+    <Label [text]="text" row="0" col="1" *ngIf="text"></Label>
+    <StackLayout *ngIf="!text" row="0" col="1">
+      <ng-content></ng-content>
+    </StackLayout>
+</GridLayout>

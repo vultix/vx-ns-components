@@ -1,0 +1,17 @@
+.vx-ns-form-field-wrapper {
+  &.disabled {
+    opacity: .45;
+  }
+}
+
+.vx-ns-form-field-container {
+  flex-wrap: wrap;
+  border-radius: 3dip;
+  border-width: 1dip;
+}
+
+.vx-ns-form-field-label {
+    font-size: 12dip;
+    padding-bottom: 2dip;
+    padding-right: 10dip;
+}

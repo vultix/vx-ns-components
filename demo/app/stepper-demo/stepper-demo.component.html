@@ -1,0 +1,43 @@
+<ScrollView>
+    <StackLayout>
+        <vx-ns-stepper [linear]="true">
+            <vx-ns-step label="Choose Payment Amount" [stepControl]="group">
+                <vx-ns-radio-group ngModel required #group="ngModel">
+                    <vx-ns-radio-button text="$10" value="a"></vx-ns-radio-button>
+                    <vx-ns-radio-button text="$20" value="b"></vx-ns-radio-button>
+                    <vx-ns-radio-button text="$30" value="c"></vx-ns-radio-button>
+                </vx-ns-radio-group>
+            </vx-ns-step>
+
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+            <vx-ns-step label="Enter your name" [stepControl]="field">
+                <vx-ns-autocomplete placeholder="Select State">
+                    <vx-ns-item text="798 w 2410 n pleasant grove, utah USA North America Pleasant Grove County" value="valUtah"></vx-ns-item>
+                    <vx-ns-item text="3873 9837 9fhoasidfh asdf adfasdf 3a" value="valArizona"></vx-ns-item>
+                    <vx-ns-item text="adsfadf8a sdf9s as9f8da dsfdsa" value="valAlaska"></vx-ns-item>
+                    <vx-ns-item text="Arkansaw" value="valArkansaw"></vx-ns-item>
+                    <vx-ns-item text="Hawaii" value="valHawaii"></vx-ns-item>
+
+                </vx-ns-autocomplete>
+            </vx-ns-step>
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+            <vx-ns-step label="Step 2">
+                <Label text="You made it!"></Label>
+            </vx-ns-step>
+
+        </vx-ns-stepper>
+    </StackLayout>
+</ScrollView>
